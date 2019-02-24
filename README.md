@@ -1,5 +1,5 @@
 # React-Shop
-Simple online-shop with client-side on React JS, server-side on Node JS with using Typescript
+Simple online-shop with client-side on React JS with using Typescript, server-side on Node JS with using Typescript
 
 Start: 
   Server: cd ...path.../server & npm run dev:ts
