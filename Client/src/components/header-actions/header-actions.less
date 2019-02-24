@@ -1,0 +1,69 @@
+@import "../../theme.less";
+
+.header-actions {
+  padding: @main-padding;
+  background: @primary-color;
+  &__breadcrumbs {
+    float: left;
+    margin-bottom: 5px;
+  }
+  &__cart {
+    color: @primary-color;
+    float: right;
+    margin-bottom: 10px;
+  }
+  &__logout {
+    text-align: right;
+    clear: both;
+  }
+}
+
+.header-actions-breadcrumbs {
+  user-select: none;
+  color: @accent-color;
+  &__home {
+    font-weight: 500;
+    font-size: 1.1em;
+  }
+  &__piece {
+    font-weight: 400;
+    font-size: 1em;
+    color: @secondary-color;
+    display: inline;
+    &__slash {
+      margin: 0 5px;
+    }
+    &__end {
+      color: @accent-color;
+      font-weight: 500;
+      font-size: 1.1em;
+    }
+  }
+}
+
+.header-actions-cart {
+  border-radius: @border-radius;
+  background: @accent-color;
+  padding: @component-padding;
+  font-weight: 500;
+  font-size: 1.1em;
+  user-select: none;
+  &__cost {
+    margin: 0 5px;
+  }
+  &__product-count {
+    margin: 0;
+  }
+}
+
+.header-actions-logout {
+  cursor: pointer;
+  user-select: none;
+  font-weight: 500;
+  font-size: 1.02em;
+  padding-bottom: 5px;
+  color: @secondary-color;
+  &__text {
+    margin-left: 5px;
+  }
+}

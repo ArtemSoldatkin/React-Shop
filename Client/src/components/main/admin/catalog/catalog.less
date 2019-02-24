@@ -1,0 +1,183 @@
+@import "../../../../theme.less";
+
+.admin-catalog {
+  height: 100%;
+  &__title {
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  &__search {
+    height: 36px;
+  }
+  &__actions {
+    margin: 5px 0 10px 0;
+    &__all-products {
+      user-select: none;
+      cursor: pointer;
+      font-size: 1.05em;
+      font-weight: 600;
+      margin-right: 5px;
+      float: left;
+    }
+    &__add_product {
+      float: left;
+    }
+  }
+}
+
+.admin-catalog-products {
+  &__table {
+    border: @border;
+    border-left: none;
+    border-right: none;
+    background: @accent-color;
+    display: inline-block;
+    width: 100%;
+    &__title {
+      font-size: 1.05em;
+      font-weight: 600;
+    }
+  }
+  &__product {
+    //cursor: pointer;
+    font-weight: 500;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    word-break: break-all;
+    overflow: hidden;
+    white-space: nowrap;
+    &:hover {
+      overflow: visible;
+      white-space: normal;
+      height: auto;
+    }
+  }
+  &__del {
+    user-select: none;
+    cursor: pointer;
+    color: @primary-color;
+  }
+}
+
+.create-product {
+  &__input-number {
+    width: 100%;
+  }
+}
+
+::-webkit-file-upload-button {
+  cursor: pointer;
+  user-select: none;
+}
+///-----
+.custom-upload {
+  height: 100%;
+  &__modal {
+    text-align: center;
+  }
+  &__upload {
+    border: 1px dashed #ddd;
+    border-radius: @border-radius;
+    margin-bottom: 5px;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+    &__input {
+      position: absolute;
+      top: 0;
+      opacity: 0;
+      width: 100%;
+      overflow: hidden;
+      height: 100%;
+      user-select: none;
+      cursor: pointer;
+    }
+    &__replacement {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      background: @secondary-color;
+      user-select: none;
+      cursor: pointer;
+      & div {
+        margin: auto;
+        text-align: center;
+        //color: @primary-color;
+        & i {
+          font-size: 25px;
+        }
+        & p {
+          display: block;
+          font-weight: 600;
+          line-height: 5px;
+        }
+      }
+    }
+  }
+
+  &__box {
+    border: @border;
+    border-radius: @border-radius;
+    margin-bottom: 5px;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    line-height: 100px;
+    &__bx {
+      line-height: 0;
+      width: 100px;
+      height: 100px;
+      text-align: center;
+      &__image {
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: @border-radius;
+      }
+    }
+    &__actions {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100px;
+      height: 100px;
+      border-radius: @border-radius;
+      background: black;
+      opacity: 0;
+      line-height: 100px;
+      text-align: center;
+      &:hover {
+        opacity: 0.7;
+      }
+      &__btn {
+        user-select: none;
+        cursor: pointer;
+        color: @secondary-color;
+        margin: 0 3px;
+        &:hover {
+          color: @primary-color;
+        }
+      }
+    }
+  }
+}
+
+.admin-categories {
+  //border-radius: 3px;
+  //border: 1px solid #ddd;
+  //background: white;
+  display: inline-block;
+  width: 100%;
+  padding: 5px;
+  &__selected {
+    display: inline;
+    max-width: 190px;
+    margin-right: 7px;
+  }
+  &__input {
+    width: 400px;
+    display: inline-block;
+    user-select: none;
+  }
+}

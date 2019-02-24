@@ -1,0 +1,148 @@
+@import "../../../../theme.less";
+
+@order-title-size: 1.1em;
+@order-title-weight: 600;
+
+.orders {
+  &__actions {
+    border: @border;
+    border-radius: @border-radius;
+    background: @accent-color;
+    margin-bottom: 10px;
+    padding: 5px;
+    display: inline-block;
+    width: 100%;
+    &__search {
+      text-align: center;
+      &__input {
+        max-width: 70%;
+        height: 36px;
+      }
+    }
+    &__filters {
+      font-size: @order-title-size;
+      font-weight: @order-title-weight;
+      margin: 5px 0;
+      &__text {
+        margin-right: 5px;
+        user-select: none;
+      }
+      &__select {
+        width: 250px;
+      }
+    }
+    &__sorts {
+      &__button {
+        font-size: @order-title-size;
+        font-weight: @order-title-weight;
+        user-select: none;
+        cursor: pointer;
+        &__text {
+          margin-right: 5px;
+        }
+      }
+    }
+    &__total {
+      text-align: center;
+      font-size: 0.8em;
+      font-weight: 600;
+    }
+  }
+}
+
+.order {
+  border: @border;
+  border-radius: @border-radius;
+  margin-bottom: 10px;
+  padding: @component-padding;
+  &-new {
+    background: #ffcccc;
+  }
+  &-in-work {
+    background: #ffffcc;
+  }
+  &-done {
+    background: #ccffcc;
+  }
+  &__actions {
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 5px 0;
+    padding: 0;
+    &__status {
+      float: left;
+      font-size: @order-title-size;
+      font-weight: @order-title-weight;
+      user-select: none;
+      margin: 0;
+      padding: 0;
+    }
+    &__buttons-group {
+      margin: 0;
+      padding: 0;
+      float: right;
+      &__button {
+        margin-right: 5px;
+      }
+    }
+  }
+  &__client {
+    margin-bottom: 5px;
+    font-size: 1.05em;
+    font-weight: 500;
+    border: @border;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    &__icon {
+      margin-right: 5px;
+      font-size: @order-title-size;
+    }
+    &__name {
+      text-overflow: ellipsis;
+      cursor: pointer;
+      word-break: break-all;
+      overflow: hidden;
+      white-space: nowrap;
+      &:hover {
+        overflow: visible;
+        white-space: normal;
+        height: auto;
+      }
+    }
+  }
+  &__products {
+    margin-bottom: 5px;
+    &__title {
+      &__text {
+        font-size: @order-title-size;
+        font-weight: @order-title-weight;
+        margin-right: 5px;
+      }
+    }
+    &__list {
+      margin-top: 5px;
+      border: @border;
+      padding: 5px;
+      border-radius: @border-radius;
+      background: @secondary-color;
+      &__title {
+        font-weight: 500;
+        border: @border;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        margin-bottom: 5px;
+      }
+    }
+  }
+  &__total-price {
+    margin-bottom: 5px;
+    font-size: @order-title-size;
+    font-weight: @order-title-weight;
+    border: @border;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+  }
+}
